@@ -85,7 +85,7 @@ getter is used to calculate key values just-in-time.
 
 So, it's not recommended to call unused keys.
 
-If you want to batch print all keys, use __data__ key.
+If you want to batch print all keys, use ``__data__`` key.
 
 ```js
 JSON.stringify(kakaoDB.get('chat_logs').__data__, null, 4);
