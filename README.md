@@ -45,12 +45,12 @@ kakaoDB.get('chat_logs', '1234567890123456789', {
 });
 //[object Object] <= returns chat_logs row with id=1234567890123456789 in JSON format
 
-kakaoDB.get(null, null, {
+kakaoDB.get('chat_logs', null, {
     query: 'SELECT * FROM chat_logs WHERE id = 1234567890123456789'
 });
 //[object Object] <= returns chat_logs row with id=1234567890123456789 in JSON format
 
-kakaoDB.get(null, null, {
+kakaoDB.get('chat_logs', null, {
     query: 'SELECT * FROM chat_logs WHERE user_id = 123456789',
     range: [3/*, true*/] //if true added, it will return last matching rows in descending orders instead of first
 });
