@@ -64,7 +64,7 @@ export default class {
     get (table, index, args = {} /* query(string), id(string), range(arr[int, bool]) */ ) {
         try {
         if (table == 'chat_logs' && !index) index = this.index();
-        if (Object.keys(this.col).indexOf(table) == -1) return null;
+        if (Object.keys(this.#col).indexOf(table) == -1) return null;
         let cursor = !args.query ?
             this[this.#col[table].loc].rawQuery("SELECT * FROM " + table + " WHERE " + (args.id ? args.id : this.#col[table].index) + " = ?", [index]) :
             this[this.#col[table].loc].rawQuery(args.query, null)
